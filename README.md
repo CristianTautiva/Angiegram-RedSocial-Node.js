@@ -1,6 +1,13 @@
 # Angiegram-RedSocial-Node.js
 Una red social utilizando node.js, mysql, y express
 
+Integrantes :  
+
+* Cristian Tautiva 1151565
+* Juan Pablo Cardenas 1151849
+* Dairo Rodriguez Gomez 1151358
+
+
 Back-end: Node.js
 
 Front-end: Bootstrap 4, CSS, Javascript, HTML 5, Junto con Motor de plantilla Handlebars (.hbs)
