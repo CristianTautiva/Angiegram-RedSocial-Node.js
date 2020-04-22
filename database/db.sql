@@ -70,13 +70,7 @@ CREATE TABLE `sessions` (
   `data` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
---
--- Volcado de datos para la tabla `sessions`
---
 
-INSERT INTO `sessions` (`session_id`, `expires`, `data`) VALUES
-('CSciL6cUIuVOjn3hhZvU_RtnO8u2wkkY', 1587585929, '{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"flash\":{},\"passport\":{\"user\":8}}'),
-('ad8_RyefEt2UgzMlZWhZSIi8PVrB0yM_', 1587588212, '{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"flash\":{},\"passport\":{}}');
 
 -- --------------------------------------------------------
 
