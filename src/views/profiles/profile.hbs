@@ -1,0 +1,67 @@
+<div class="container p-5">
+  <div class="row">
+
+    <div class="col-md-5 mx-auto">
+      <div class="card text-center">
+        <div class="card-body">
+          <form action="/links/upload/{{user.id}}" method="post" enctype="multipart/form-data">
+            <h2>Perfil</h2>
+
+            <img src="{{user.profile_img}}" alt="profile_img"
+              style="width:40%; height:40%; border-radius:50%; padding:2%">
+            <h5 class="p-2"><b>Nombre Completo: </b>{{ user.nombres }}</h5>
+            <h5 class="p-1"><b>Nickname: </b>{{ user.username }}</h5>
+            <h5><b>Fecha registro:</b> {{ timeago user.fecha_registro }}</h5>
+            <h4 class="p-3">Editar foto de perfil</h4>
+            <div class="input-group">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile04"
+                  aria-describedby="inputGroupFileAddon04" name="img" required>
+                <label class="custom-file-label" for="inputGroupFile04">Buscar Foto</label>
+              </div>
+            </div>
+            <button class="btn btn-primary m-4">Subir</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container p-5">
+  <div class="row">
+    {{#if photos}}
+        {{#each photos}}
+
+        <div class="col-md-4">
+             <div class="card text-center">
+                 <div class="card-body">
+                     <a href="#">
+                     <h3 class="card-title text-uppercase">
+                         <a href="{{image_url}}" target="_blank"><img src="{{image_url}}" alt="{{public_id}}"style="width:102%; height:60%;" ></a>
+                     </h3>
+                     </a>
+                    
+                     <p class="m-2"><b>Publicada hace:</b> {{timeago fecha_subida}}</p>
+                     <p class="m-2"><b>Le gusta a:</b> {{me_gusta}} personas</p>
+                     <a href="{{image_url}}" target="_blank" class="btn btn-primary">Ver</a>
+                     <a href="/links/delete/{{public_id}}" class="btn btn-danger">Eliminar</a>
+                 </div>
+             </div>
+         </div>
+         {{else}}
+        <div class="col-md-4 mx-auto">
+          <div class="card card-body text-center">
+            <p>Ups! Parece que no hay publicaciones aun, vuelve mas tarde</p>
+          </div>
+        </div>
+        {{/each}}
+    {{/if}}
+
+  </div>
+</div>
+<style type="text/css">
+  body {
+    font-family: 'Oswald', sans-serif !important;
+    overflow: auto !important;
+  }
+</style>

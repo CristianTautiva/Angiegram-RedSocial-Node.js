@@ -1,0 +1,72 @@
+<header id="navegacion">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #310443;">
+
+    <div class="container">
+      <img id="img" class="navbar-brand" src="/img/logo.png" alt="logo">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      {{#if user }}
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <div class="demo">
+              <form class="form-search content-search navbar-form" action="/buscar" method="get">
+                <div class="input-group">
+                  <input placeholder="Buscar" class="form-control form-text" type="search"  name="dato" size="30"
+                    maxlength="128" required />
+                  <span class="input-group-btn">
+                    <button type="submit" class="btn btn-danger"><span class="icon glyphicon glyphicon-search"
+                        aria-hidden="true"></span><i class="fa fa-search fa-lg">&nbsp;</i></button>&nbsp;
+                  </span>
+                </div>
+              </form>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/links/start">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/links/followed/{{user.id}}">Siguiendo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/links/followers/{{user.id}}">Seguidores</a>
+          </li>
+          <li class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle" href="/profile" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              {{user.username}}
+              <img src="{{user.profile_img}}" style="border-radius: 50%; padding:2%" title="{{user.username}}" alt="{{user.username}}"
+                width="20px" height="20px">
+
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/profile">Perfil</a>
+              <a class="dropdown-item" href="/links/upload_feed/{{user.id}}">Comenzar a subir fotos</a>
+              <a class="dropdown-item" href="/links/edit_data/{{user.id}}">Editar Datos</a>
+              <a class="dropdown-item" href="/logout">Cerrar Sesion</a>
+              <div class="dropdown-divider"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      {{else}}
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/signin">Iniciar Sesion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup">Registrarse</a>
+          </li>
+        </ul>
+      </div>
+      {{/if}}
+    </div>
+  </nav>
+</header>

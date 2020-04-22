@@ -1,0 +1,22 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Importa tus fotos para que todos las vean! </h3><br>
+                    <form action="/links/upload_feed/{{id}}" method="POST" enctype="multipart/form-data">
+                       <div class="form-group">
+                            <h5>Seleccione la foto a subir </h5><br>
+                            <img src="https://res.cloudinary.com/dcris/image/upload/v1587325105/hands_e5b4pl.png" alt="xlsx"
+                        style="width:140px !important; height:140px !important; margin-bottom: 15px !important">
+                            <div class="custom-file">
+                            <input type="file" name="img" required >
+                            </div>
+                            <button type="submit" class="btn btn-success" style="margin-top: 10px">Subir</button>
+                        </div>
+                    </form>
+                </div>
+           </div>
+        </div>
+    </div>
+</div>

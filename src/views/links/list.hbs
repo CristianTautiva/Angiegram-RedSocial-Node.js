@@ -1,0 +1,40 @@
+<div class="container p-4">
+  <div class="row">
+        {{#each users}}
+         <div class="col-md-4">
+             <div class="card text-center">
+                 <div class="card-body">
+                     <a href="#">
+                     <h3 class="card-title text-uppercase">
+                         {{comp_marca}}
+                     </h3>
+                     </a>
+                     <h3 class="card-title text-uppercase">
+                         {{comp_ref}}
+                     </h3>
+                    <img src="{{profile_img}}" alt="{{username}}" style="width:140px !important; height:140px !important">
+                     <p class="m-2"><b>Nombres:</b> {{nombres}}</p>
+                     <p class="m-2"><b>NickName:</b> {{username}}</p>
+                     <p class="m-2"><b>Registrado hace:</b> {{timeago fecha_registro}}</p>
+                     
+                     <a href="/links/profile/{{id}}" class="btn btn-primary">Visitar perfil</a>
+                     <a href="/links/report/{{id}}" class="btn btn-danger">Reportar</a>
+                 </div>
+             </div>
+         </div>
+         {{else}}
+        <div class="col-md-4 mx-auto">
+          <div class="card card-body text-center">
+            <p>Ups! Parece que no hay gente registrada aun, vuelve mas tarde</p>
+          </div>
+        </div>
+        {{/each}}
+  </div>
+</div>
+<style type="text/css"> 
+body{ 
+    font-family: 'Oswald', sans-serif !important;
+    overflow: auto !important;
+}
+</style> 
+

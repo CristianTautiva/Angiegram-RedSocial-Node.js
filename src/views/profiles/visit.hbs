@@ -1,0 +1,29 @@
+<div class="container p-5">
+  <div class="row">
+    
+    <div class="col-md-6 mx-auto">
+      <div class="card text-center">
+        <div class="card-body">
+          
+          <h2>Perfil</h2>
+          
+          <img src="{{profile_img}}" alt="profile_img"
+            style="width:40%; height:40%; border-radius:50%; padding:2%">
+          <h5 class="p-2"><b>Nombre Completo: </b>{{ nombres }}</h5>
+          <h5 class="p-1"><b>Nickname: </b>{{ username }}</h5>
+          <h5><b>Seguidores:&nbsp;</b> {{ seguidores }}&nbsp; usuarios</h5>
+          <h5><b>Siguiendo:&nbsp;</b> {{ siguiendo }}&nbsp; usuarios</h5>
+          <a href="/links/ver_fotos/{{id}}" class="btn btn-success m-4">Ver fotos</a>
+          <a href="/links/follow/{{id}}" class="btn btn-primary m-4">Seguir</a>
+          <a href="/links/report/{{id}}" class="btn btn-danger m-4">reportar</a>
+          
+        </div>
+      </div>
+    </div>
+    <style type="text/css">
+  body {
+    font-family: 'Oswald', sans-serif !important;
+    overflow: auto !important;
+  }
+</style>
+   
