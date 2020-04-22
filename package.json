@@ -29,7 +29,6 @@
     "passport-local": "^1.0.0",
     "timeago.js": "^4.0.2",
     "uuid": "^7.0.3",
-    "xlsx": "^0.15.6"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
